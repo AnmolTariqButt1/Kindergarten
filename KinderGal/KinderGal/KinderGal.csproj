@@ -167,7 +167,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assignments.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -211,6 +210,7 @@
     <Content Include="css\SLbootstrap.min.css" />
     <Content Include="css\style.css" />
     <Content Include="css\sytle1.css" />
+    <Content Include="dashboardStudent.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -259,6 +259,7 @@
     <Content Include="js\stellar.js" />
     <Content Include="js\theme.js" />
     <Content Include="js\wow.min.js" />
+    <Content Include="MessagesT.html" />
     <Content Include="Models\General.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>General.edmx</DependentUpon>
@@ -302,6 +303,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="SignIn.html" />
+    <None Include="Views\Announcement\dashboardStudent.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
