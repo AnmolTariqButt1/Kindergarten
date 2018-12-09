@@ -313,7 +313,7 @@ hr {
     left: 0;
     background-size: cover;
     background-position: center center;
-    background-color: blue;
+    background-color: white;
 }
 
 .sidebar,
@@ -580,7 +580,7 @@ hr {
 .off-canvas-sidebar:before,
 .off-canvas-sidebar[data-background-color="white"]:after,
 .off-canvas-sidebar[data-background-color="white"]:before {
-    background-color: #F7B25B;
+    background-color: #FAAC58;
 }
 
 .sidebar .logo, .sidebar[data-background-color="white"] .logo,
