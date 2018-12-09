@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\New folder\KinderGal\KinderGal\Models\Assignment.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Arif Iftikhar\Documents\GitHub\Kindergarten\KinderGal\KinderGal\Models\General.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

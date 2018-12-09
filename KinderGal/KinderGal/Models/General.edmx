@@ -5,7 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="KinderGartenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Announcements">
+        <EntityType Name="Announce">
           <Key>
             <PropertyRef Name="AnnouncementID" />
           </Key>
@@ -13,7 +13,7 @@
           <Property Name="Announcement" Type="nvarchar(max)" Nullable="false" />
           <Property Name="Date_Time" Type="smalldatetime" Nullable="false" />
         </EntityType>
-        <EntityType Name="Assignments">
+        <EntityType Name="Assigne">
           <Key>
             <PropertyRef Name="AssignmentID" />
           </Key>
@@ -33,8 +33,8 @@
           <Property Name="Section" Type="nchar" MaxLength="25" Nullable="false" />
         </EntityType>
         <EntityContainer Name="KinderGartenModelStoreContainer">
-          <EntitySet Name="Announcements" EntityType="Self.Announcements" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Assignments" EntityType="Self.Assignments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Announce" EntityType="Self.Announce" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Assigne" EntityType="Self.Assigne" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SASignUp" EntityType="Self.SASignUp" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
@@ -42,20 +42,20 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KinderGartenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Announcement">
+        <EntityType Name="Announce">
           <Key>
             <PropertyRef Name="AnnouncementID" />
           </Key>
           <Property Name="AnnouncementID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Announcement1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Announcement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Date_Time" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <EntityType Name="Assignment">
+        <EntityType Name="Assigne">
           <Key>
             <PropertyRef Name="AssignmentID" />
           </Key>
           <Property Name="AssignmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Assignment1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Assignment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Date_Time" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="SASignUp">
@@ -70,8 +70,8 @@
           <Property Name="Section" Type="String" MaxLength="25" FixedLength="true" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="KinderGartenEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Announcements" EntityType="Self.Announcement" />
-          <EntitySet Name="Assignments" EntityType="Self.Assignment" />
+          <EntitySet Name="Announces" EntityType="Self.Announce" />
+          <EntitySet Name="Assignes" EntityType="Self.Assigne" />
           <EntitySet Name="SASignUps" EntityType="Self.SASignUp" />
         </EntityContainer>
       </Schema>
@@ -80,20 +80,20 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="KinderGartenModelStoreContainer" CdmEntityContainer="KinderGartenEntities">
-          <EntitySetMapping Name="Announcements">
-            <EntityTypeMapping TypeName="KinderGartenModel.Announcement">
-              <MappingFragment StoreEntitySet="Announcements">
+          <EntitySetMapping Name="Announces">
+            <EntityTypeMapping TypeName="KinderGartenModel.Announce">
+              <MappingFragment StoreEntitySet="Announce">
                 <ScalarProperty Name="AnnouncementID" ColumnName="AnnouncementID" />
-                <ScalarProperty Name="Announcement1" ColumnName="Announcement" />
+                <ScalarProperty Name="Announcement" ColumnName="Announcement" />
                 <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Assignments">
-            <EntityTypeMapping TypeName="KinderGartenModel.Assignment">
-              <MappingFragment StoreEntitySet="Assignments">
+          <EntitySetMapping Name="Assignes">
+            <EntityTypeMapping TypeName="KinderGartenModel.Assigne">
+              <MappingFragment StoreEntitySet="Assigne">
                 <ScalarProperty Name="AssignmentID" ColumnName="AssignmentID" />
-                <ScalarProperty Name="Assignment1" ColumnName="Assignment" />
+                <ScalarProperty Name="Assignment" ColumnName="Assignment" />
                 <ScalarProperty Name="Date_Time" ColumnName="Date_Time" />
               </MappingFragment>
             </EntityTypeMapping>

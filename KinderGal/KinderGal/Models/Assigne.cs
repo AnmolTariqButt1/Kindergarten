@@ -12,10 +12,10 @@ namespace KinderGal.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Assignment
+    public partial class Assigne
     {
         public int AssignmentID { get; set; }
-        public string Assignment1 { get; set; }
+        public string Assignment { get; set; }
         public System.DateTime Date_Time { get; set; }
     }
 }

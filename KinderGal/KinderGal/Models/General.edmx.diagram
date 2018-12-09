@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="eab91e9eade54c6e9b5a7a415d7dfddc" Name="Diagram1">
-        <EntityTypeShape EntityType="KinderGartenModel.Announcement" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KinderGartenModel.Assignment" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="587d45548f6f422daebca9c4c25791d0" Name="Diagram1">
+        <EntityTypeShape EntityType="KinderGartenModel.Announce" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinderGartenModel.Assigne" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KinderGartenModel.SASignUp" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>

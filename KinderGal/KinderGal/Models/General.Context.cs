@@ -25,8 +25,8 @@ namespace KinderGal.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Announcement> Announcements { get; set; }
-        public virtual DbSet<Assignment> Assignments { get; set; }
+        public virtual DbSet<Announce> Announces { get; set; }
+        public virtual DbSet<Assigne> Assignes { get; set; }
         public virtual DbSet<SASignUp> SASignUps { get; set; }
     }
 }

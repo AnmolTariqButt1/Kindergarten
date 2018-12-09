@@ -134,34 +134,35 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AssignmentsController.cs" />
+    <Compile Include="Controllers\AnnouncementController.cs" />
+    <Compile Include="Controllers\AssignesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Announcement.cs">
-      <DependentUpon>Assignment.tt</DependentUpon>
+    <Compile Include="Models\Announce.cs">
+      <DependentUpon>General.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Assignment.Context.cs">
+    <Compile Include="Models\Assigne.cs">
+      <DependentUpon>General.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\General.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Assignment.Context.tt</DependentUpon>
+      <DependentUpon>General.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Assignment.cs">
-      <DependentUpon>Assignment.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Assignment.Designer.cs">
+    <Compile Include="Models\General.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Assignment.edmx</DependentUpon>
+      <DependentUpon>General.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Assignment1.cs">
+    <Compile Include="Models\General.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Assignment.tt</DependentUpon>
+      <DependentUpon>General.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\SASignUp.cs">
-      <DependentUpon>Assignment.tt</DependentUpon>
+      <DependentUpon>General.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -258,25 +259,18 @@
     <Content Include="js\stellar.js" />
     <Content Include="js\theme.js" />
     <Content Include="js\wow.min.js" />
-    <Content Include="Models\Assignment.Context.tt">
+    <Content Include="Models\General.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Assignment.Context.cs</LastGenOutput>
-      <DependentUpon>Assignment.edmx</DependentUpon>
+      <DependentUpon>General.edmx</DependentUpon>
+      <LastGenOutput>General.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Assignment.tt">
+    <Content Include="Models\General.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Assignment.edmx</DependentUpon>
-      <LastGenOutput>Assignment1.cs</LastGenOutput>
+      <DependentUpon>General.edmx</DependentUpon>
+      <LastGenOutput>General.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Assignment.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Assignment.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Assignment.edmx.diagram">
-      <DependentUpon>Assignment.edmx</DependentUpon>
-    </Content>
     <Content Include="css\2style.css.map" />
     <Content Include="css\SLbootstrap-grid.css.map" />
     <Content Include="css\SLbootstrap-grid.min.css.map" />
@@ -290,6 +284,13 @@
     <Content Include="css\fonts\Linearicons-Free.ttf" />
     <Content Include="css\fonts\Linearicons-Free.woff" />
     <Content Include="css\fonts\Linearicons-Free.woff2" />
+    <EntityDeploy Include="Models\General.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>General.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\General.edmx.diagram">
+      <DependentUpon>General.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -315,10 +316,14 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Assignments\Upload.cshtml" />
-    <Content Include="Views\Assignments\Delete.cshtml" />
-    <Content Include="Views\Assignments\Edit.cshtml" />
-    <Content Include="Views\Assignments\Assignments.cshtml" />
+    <Content Include="Views\Assignes\Upload.cshtml" />
+    <Content Include="Views\Assignes\Delete.cshtml" />
+    <Content Include="Views\Assignes\Edit.cshtml" />
+    <Content Include="Views\Assignes\Assignments.cshtml" />
+    <Content Include="Views\Announcement\Upload.cshtml" />
+    <Content Include="Views\Announcement\Delete.cshtml" />
+    <Content Include="Views\Announcement\Edit.cshtml" />
+    <Content Include="Views\Announcement\Announcements.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

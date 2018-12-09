@@ -1,7 +1,7 @@
-﻿@model KinderGal.Models.Assignment
+﻿@model IEnumerable<KinderGal.Models.Assigne>
 
 @{
-    ViewBag.Title = "Upload Assignment";
+    ViewBag.Title = "Assignments";
 }
 <head>
     <meta charset="utf-8" />
@@ -101,41 +101,39 @@
                 </div>
             </nav>
 
-            <p style="font-size:40px"><b>Upload</b></p>
 
 
+            <h4 style="font-size:25px; color:black">
+                @Html.ActionLink("Upload", "Upload")
+            </h4>
+            <table class="table" style="color:black">
+                <tr style="color:black">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Assignment)
+                    </th>
+                    <th style="color:black">
+                        @Html.DisplayNameFor(model => model.Date_Time)
+                    </th>
+                    <th></th>
+                </tr>
 
-            @using (Html.BeginForm())
-            {
-                @Html.AntiForgeryToken()
+                @foreach (var item in Model)
+                {
+                    <tr style="color:black">
+                        <td style="color:black">
+                            @Html.DisplayFor(modelItem => item.Assignment)
+                        </td>
+                        <td style="color:black">
+                            @Html.DisplayFor(modelItem => item.Date_Time)
+                        </td>
+                        <td style="color:black">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.AssignmentID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.AssignmentID })
+                        </td>
+                    </tr>
+                }
 
-                <div class="form-horizontal">
-
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Assignment1, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Assignment1, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Assignment1, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Date_Time, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Date_Time, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Date_Time, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Upload" class="btn btn-default" />
-                        </div>
-                    </div>
-                </div>
-            }
+            </table>
         </div>
 </body>
 <script src="~/js/2jquery.min.js" type="text/javascript"></script>
@@ -152,11 +150,3 @@
 <script src="~/js/2paper-dashboard.js"></script>
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="~/js/2demo.js"></script>
-
-<div>
-    @Html.ActionLink("Back", "Assignment")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

@@ -12,10 +12,10 @@ namespace KinderGal.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Announcement
+    public partial class Announce
     {
         public int AnnouncementID { get; set; }
-        public string Announcement1 { get; set; }
+        public string Announcement { get; set; }
         public System.DateTime Date_Time { get; set; }
     }
 }
